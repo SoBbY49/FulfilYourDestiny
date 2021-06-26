@@ -10,6 +10,9 @@ ttk.Label(root, text="Separating widget").pack()
 panedwindow=ttk.Panedwindow(root, orient=VERTICAL)
 root.resizable(width=False ,height=False)
 panedwindow.pack(fill=BOTH, expand=True)
+#Fullscreen
+root.overrideredirect(True)
+root.geometry("{0}x{1}+0+0".format(root.winfo_screenwidth(), root.winfo_screenheight()))
 #Create Frams
 fram1=ttk.Frame(panedwindow,width=1000,height=600, relief=SUNKEN)
 fram2=ttk.Frame(panedwindow,width=1000,height=350, relief=SUNKEN)
