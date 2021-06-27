@@ -10,7 +10,7 @@ root = Tk()
 root.title("Fulfil Your Destiny")
 root.configure(bg="black")
 root.resizable(width=False, height=False)
-root.attributes('-fullscreen', True)
+root.wm_attributes('-fullscreen', True)
 
 # Custom menu
 bar = tkinter.Menu(root)
