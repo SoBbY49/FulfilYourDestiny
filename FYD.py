@@ -38,6 +38,7 @@ panedwindow.add(txt_art, weight=1)
 panedwindow.add(txt_story, weight=1)
 
 txt_art.insert(END, fyd_logo())
+txt_art.insert("1.0", chicken())
 txt_story.insert(END, "this is the story of the 3 piggies")
 txt_story.insert("1.0", "FYD starts here...")
 
