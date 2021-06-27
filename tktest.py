@@ -8,10 +8,13 @@ root = Tk()
 # App Title
 root.title("Python GUI Application ")
 root.configure(bg="black")
-ttk.Label(root, text="Fulfil Your Destiny", font=("Courier", 30), background='black', foreground='red').pack()
+# ttk.Label(root, text="Fulfil Your Destiny", font=("Courier", 30), background='black', foreground='red').pack()
 
 # Create Panedwindow
-panedwindow = ttk.Panedwindow(root, orient=VERTICAL)
+# FIXME need to make frames a fixed size
+panedwindow_style = ttk.Style()
+panedwindow_style.configure("BW.TPanedwindow", foreground="red", background="black", showhandle=False, sashwidth=0)
+panedwindow = ttk.Panedwindow(root, orient=HORIZONTAL, style="BW.TPanedwindow")
 root.resizable(width=False, height=False)
 panedwindow.pack(fill=BOTH, expand=True)
 
@@ -20,12 +23,11 @@ panedwindow.pack(fill=BOTH, expand=True)
 root.overrideredirect(True)
 root.geometry("{0}x{1}+0+0".format(root.winfo_screenwidth(), root.winfo_screenheight()))
 
-# FIXME: define text style for the app and use in all objects if possible
 # Create Frams
-style = ttk.Style()
-style.configure("BW.TFrame", foreground="black", background="black")
-fram1 = ttk.Frame(panedwindow, width=1000, height=600, relief=SUNKEN, style="BW.TFrame")
-fram2 = ttk.Frame(panedwindow, width=1000, height=350, relief=SUNKEN, style="BW.TFrame")
+frame_style = ttk.Style()
+frame_style.configure("BW.TFrame", foreground="black", background="black")
+fram1 = ttk.Frame(panedwindow, width=1000, height=600, style="BW.TFrame")
+fram2 = ttk.Frame(panedwindow, width=1000, height=350, style="BW.TFrame")
 
 panedwindow.add(fram1, weight=1)
 panedwindow.add(fram2, weight=4)
