@@ -20,11 +20,12 @@ panedwindow.pack(fill=BOTH, expand=True)
 root.overrideredirect(True)
 root.geometry("{0}x{1}+0+0".format(root.winfo_screenwidth(), root.winfo_screenheight()))
 
-# FIXME change bg colour of frames. Use styles.
 # FIXME: define text style for the app and use in all objects if possible
 # Create Frams
-fram1 = ttk.Frame(panedwindow, width=1000, height=600, relief=SUNKEN)
-fram2 = ttk.Frame(panedwindow, width=1000, height=350, relief=SUNKEN)
+style = ttk.Style()
+style.configure("BW.TFrame", foreground="black", background="black")
+fram1 = ttk.Frame(panedwindow, width=1000, height=600, relief=SUNKEN, style="BW.TFrame")
+fram2 = ttk.Frame(panedwindow, width=1000, height=350, relief=SUNKEN, style="BW.TFrame")
 
 panedwindow.add(fram1, weight=1)
 panedwindow.add(fram2, weight=4)
