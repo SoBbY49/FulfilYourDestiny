@@ -3,20 +3,7 @@ import tkinter
 from tkinter import *
 from tkinter import ttk
 from tkinter.font import Font
-
-def fyd_logo():
-    myart = """
-▄████ ▄   █    ▄████  ▄█ █      ▀▄    ▄ ████▄   ▄   █▄▄▄▄    ██▄   ▄███▄     ▄▄▄▄▄      ▄▄▄▄▀ ▄█    ▄  ▀▄    ▄ 
-█▀   ▀ █  █    █▀   ▀ ██ █        █  █  █   █    █  █  ▄▀    █  █  █▀   ▀   █     ▀▄ ▀▀▀ █    ██     █   █  █ 
-█▀▀ █   █ █    █▀▀    ██ █         ▀█   █   █ █   █ █▀▀▌     █   █ ██▄▄   ▄  ▀▀▀▀▄       █    ██ ██   █   ▀█   
-█   █   █ ███▄ █      ▐█ ███▄      █    ▀████ █   █ █  █     █  █  █▄   ▄▀ ▀▄▄▄▄▀       █     ▐█ █ █  █   █    
-█  █▄ ▄█     ▀ █      ▐     ▀   ▄▀           █▄ ▄█   █      ███▀  ▀███▀               ▀       ▐ █  █ █ ▄▀     
-▀  ▀▀▀         ▀                             ▀▀▀   ▀                                           █   ██        
-
-    
-By Sobby49
-    """
-    return myart
+from fyd_art import *
 
 # root. window
 root = Tk()
