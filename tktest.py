@@ -4,6 +4,20 @@ from tkinter import *
 from tkinter import ttk
 from tkinter.font import Font
 
+def fyd_logo():
+    myart = """
+▄████ ▄   █    ▄████  ▄█ █      ▀▄    ▄ ████▄   ▄   █▄▄▄▄    ██▄   ▄███▄     ▄▄▄▄▄      ▄▄▄▄▀ ▄█    ▄  ▀▄    ▄ 
+█▀   ▀ █  █    █▀   ▀ ██ █        █  █  █   █    █  █  ▄▀    █  █  █▀   ▀   █     ▀▄ ▀▀▀ █    ██     █   █  █ 
+█▀▀ █   █ █    █▀▀    ██ █         ▀█   █   █ █   █ █▀▀▌     █   █ ██▄▄   ▄  ▀▀▀▀▄       █    ██ ██   █   ▀█   
+█   █   █ ███▄ █      ▐█ ███▄      █    ▀████ █   █ █  █     █  █  █▄   ▄▀ ▀▄▄▄▄▀       █     ▐█ █ █  █   █    
+█  █▄ ▄█     ▀ █      ▐     ▀   ▄▀           █▄ ▄█   █      ███▀  ▀███▀               ▀       ▐ █  █ █ ▄▀     
+▀  ▀▀▀         ▀                             ▀▀▀   ▀                                           █   ██        
+
+    
+By Sobby49
+    """
+    return myart
+
 # root. window
 root = Tk()
 root.title("Fulfil Your Destiny")
@@ -37,7 +51,7 @@ txt_story = tkinter.Text(panedwindow,state = "normal", foreground="white", backg
 panedwindow.add(txt_art, weight=1)
 panedwindow.add(txt_story, weight=4)
 
-txt_art.insert(END," art here")
+txt_art.insert(END,fyd_logo())
 txt_story.insert(END,"this is the story of the 3 piggies")
 txt_story.insert("1.0","FYD starts here...")
 
