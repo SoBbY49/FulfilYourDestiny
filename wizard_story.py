@@ -19,7 +19,7 @@ def part_3():
         What do you do?
         a) You quickly run to the stairs, ready to bonk anyone on the head with your staff.
         b) Cast fireball.
-        c) Cast invisibility,
+        c) Cast invisibility.
     """
     return s
 
@@ -57,13 +57,21 @@ def part_3aa():
 def part_3ab():
     s = """
     You say fireball and once again a ball of fire emerges from the gem on your staff.
-    You thrust it 
+    You thrust it into the man's chest and an explosion erupts.
+    You're blown backwards onto the stairs and the man gets launched into the wall.
+    He falls onto his knees and you can see the giant hole that he has made in the wall.
+    He shakily gets up using the large axe and starts walking limping towards you.
+    You run up the stairs.
     """
     return s
 
 
 def part_3ac():
     s = """
+    You say disappear and you become invisible.
+    The man suddenly swings his giant axe at where you were but you manage to move out of the way.
+    The man starts destroying everything in the room trying to find you.
+    You creep up the stairs out of the room.
     """
     return s
 
@@ -83,13 +91,28 @@ def part_3b():
 
 
 def part_3ba():
-    s = """
+    s = """ ROLL D20.
+    SUCCESS- You manage to jump out of the man's way in time and he slices the bookshelves that were near you in half.
+    You wasn't able to slow down in time and runs through the bookshelves into the wall.
+    The room shakes and parts of rock start to fall down from the ceiling.
+    You run towards the stairs hoping to get out of the room before the room collapses.
+    The man locks onto you and charges ypu once again.
+    You manage to get up the stairs before he runs into the staircase turning the stairs to rubble.
+    You see the huge rocks fall from the staircase onto the man and it goes quiet.
+    
+    FAIL- You try to jump out of the way but you trip over your leg and fall to the ground.
+    The man runs at you and slices his axe down onto you.
+    YOU DIED
     """
     return s
 
 
 def part_3bb():
     s = """
+    You say disappear and you become invisible.
+    The man keeps charging to where you were and smashes into the bookshelves.
+    The man starts destroying everything in the room trying to find you.
+    You creep up the stairs out of the room.
     """
     return s
 
@@ -104,26 +127,28 @@ def part_3c():
     The large man sits down on a chair in the room and starts to sharpen his large axe.
     You just remembered that there was nothing in the spell book which told you how long the invisible spell would last.
         What do you do?
-        a) Hide behind the man.
-        b) Keep standing there, you can probably stay invisible for a long time...right?
-        c) Go upstairs.
+        a) Keep standing there, you can probably stay invisible for a long time...right?
+        b) Go upstairs.
     """
     return s
 
 
 def part_3ca():
     s = """
+    You keep standing there and observing the man as he keeps sharpening his axe.
+    The man is insanely muscly, he doesn't even look human.
+    The man suddenly looks up and stares right at you.
+    You look down at yourself and see that you are no longer invisible.
+    The man gets of his chair and throws the huge axe at you, slicing you down the middle.
+    YOU DIED 
     """
     return s
 
 
 def part_3cb():
     s = """
-    """
-    return s
-
-
-def part_3cc():
-    s = """
+    The man keeps sharpening his axe on the chair and you creep towards the stairs and make your way up.
+    As soon as you get out of view of the room you begin to see your hands again.
+    The invisibility spell just ran out, that was close.
     """
     return s
