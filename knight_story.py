@@ -1,22 +1,28 @@
+import fyd_art
+
 def part_1():
     s = """
-    You wake up in a forest with the sun beaming down on your face partially being blocked by your helmet.
-    You get up as your armour clunks around and look at your surroundings.
-    In front of you is an extinguished campfire and pieces of armour and weapons lying around you.
-    You look down near your feet and see your sword and shield.
-    You bend down and pick them up as you reflect the sunlight off of the sword as you admire it.
-    You see an emblem on your shield and try to recollect your thoughts, you start to remember.
-    This emblem is of the kingdom that you are knighted to.
-    You were off scouting the area with some fellow knights when it turned to night and decided to make camp.
-    But for the life of you, you can't seem to remember where your fellow knights went.
-    Suddenly you hear some rustling in a bush behind you, you spin around as fast as you can.
-        What do you do?
-        a) Start swinging at the bush aimlessly.
-        b) Get in a defensive stance with your shield in front of you.
-        c) Shout at the bush, ordering whatever is inside to show itself.
-    """
-    return s
+You wake up in a forest with the sun beaming down on your 
+face partially being blocked by your helmet. You get up as
+your armour clunks around and look at your surroundings.
 
+In front of you is an extinguished campfire and pieces of armour and weapons lying around you.
+You look down near your feet and see your sword and shield.
+You bend down and pick them up as you reflect the sunlight off of the sword as you admire it.
+You see an emblem on your shield and try to recollect your thoughts, you start to remember.
+This emblem is of the kingdom that you are knighted to.
+You were off scouting the area with some fellow knights when it turned to night and decided to make camp.
+But for the life of you, you can't seem to remember where your fellow knights went.
+Suddenly you hear some rustling in a bush behind you, you spin around as fast as you can.
+
+   What do you do?
+      a) Start swinging at the bush aimlessly.
+      b) Get in a defensive stance with your shield in front of you.
+      c) Shout at the bush, ordering whatever is inside to show itself.
+    """
+
+    answers = { 'a' : 'knnight_story.part_1a' , 'b': 'part_1b', 'c': 'part_1c'}
+    return s, fyd_art.knight(), answers
 
 def part_1a():
     s = """
