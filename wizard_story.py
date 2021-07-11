@@ -58,7 +58,7 @@ def part_3aa():
     YOU DIED
     """
     answers = {'a': 'wizard_story.part_3aa'}
-    return s, fyd_art.wizard(), answers
+    return s, fyd_art.you_died(), answers
 
 
 def part_3ab():
@@ -156,7 +156,7 @@ def part_3ca():
     YOU DIED 
     """
     answers = {'a': 'wizard_story.part_3ca'}
-    return s, fyd_art.wizard(), answers
+    return s, fyd_art.you_died(), answers
 
 
 def part_3cb():
