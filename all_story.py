@@ -6,20 +6,27 @@ import fyd_art
 
 def intro():
     s = """
-Welcome to FYD lalb bla blah
-------- -- --- -- --- ----- -
+                            Welcome to FYD
+                            --------------
 
-Read the story carefully. At the end of each part of the story, you will be presented with options.
-You will have to choose which action you take - simply press the key in the keyboard matching the letter of the action you choose. 
+Read the story carefully. At the end of each part of the story, you
+will be presented with multiple options. You will have to choose
+which action you take - simply press the key in the keyboard
+matching the letter of the action you choose. In some actions you
+will have to roll a d20 to see if you were successful in the
+acrobatic, strength, intelligent or charismatic feat. If you roll
+a 1-10 then you failed your roll but don't worry because you might
+not of died even though you most likely would. If you roll a 11-20
+then you succeeded and could've been the best outcome in the scenario.
 
-Choose wisely, for there are no second chances - your destiny depends on it! 
+            Choose wisely, for there are no second chances!
+                    Your destiny depends on it! 
 
 Do you want to play ?
+    y) Yes, bring it on!
+    n) No, Im a chicken.
 
-Y) Yes, bring it on!
-N) Not now, i am a chicken.
-
-( Simply press Y or N to choose ) 
+(Simply press y or n to choose) 
     """
 
     answers = {'y': 'choose_character', 'n': 'quit'}
@@ -30,22 +37,19 @@ def choose_character():
     s = """
 ------------- CHOOSE YOUR CHARACTER ----------
 
-A) Archemides, the astonishing Archer from Anatolia
-
 k) Koopy, the knucklehead Knight from Kookerry
 
-w) Willy, the woeful Wizard from Wurstland
+a) Archemides, the astonishing Archer from Anatolia
 
-q) Quokquok, the quitting Chicken
+w) Willy, the woeful Wizard from Wurstland
     """
 
-    art = "%s\n\n%s\n\n%s" % (fyd_art.archer(), fyd_art.knight() , fyd_art.wizard())
+    art = "%s\n\n%s\n\n%s" % (fyd_art.knight(), fyd_art.archer(), fyd_art.wizard())
 
     answers = {
-        'w': 'wizard_start',
-        'k':'knight_story.part_1',
-        'a' : 'archer_story.archer1',
-        'q' : 'quit'
+        'k': 'knight_story.part_1',
+        'a': 'archer_story.part_2',
+        'w': 'wizard_story.part_3',
     }
 
     return s,art,answers

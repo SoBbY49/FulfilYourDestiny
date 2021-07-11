@@ -1,11 +1,10 @@
 import fyd_art
 
+
 def part_1():
     s = """
-You wake up in a forest with the sun beaming down on your 
-face partially being blocked by your helmet. You get up as
-your armour clunks around and look at your surroundings.
-
+You wake up in a forest with the sun beaming down on your face partially being blocked by your helmet.
+You get up as your armour clunks around and look at your surroundings.
 In front of you is an extinguished campfire and pieces of armour and weapons lying around you.
 You look down near your feet and see your sword and shield.
 You bend down and pick them up as you reflect the sunlight off of the sword as you admire it.
@@ -21,7 +20,7 @@ Suddenly you hear some rustling in a bush behind you, you spin around as fast as
       c) Shout at the bush, ordering whatever is inside to show itself.
     """
 
-    answers = { 'a' : 'knnight_story.part_1a' , 'b': 'part_1b', 'c': 'part_1c'}
+    answers = { 'a' : 'knight_story.part_1a', 'b': 'knight_story.part_1b', 'c': 'knight_story.part_1c'}
     return s, fyd_art.knight(), answers
 
 def part_1a():
@@ -34,7 +33,8 @@ def part_1a():
         b) Poke him with your sword.
         c) Ask if he is ok.
     """
-    return s
+    answers = { 'a' : 'knight_story.part_1aa', 'b': 'knight_story.part_1ab', 'c': 'knight_story.part_1ac'}
+    return s, fyd_art.knight(), answers
 
 
 def part_1aa():
@@ -52,14 +52,16 @@ def part_1aa():
     As you start making distance away from him you see your fellow soldiers limping towards you with their armour stripped from their body and their pale skin.
     You manage to make it out of the forest but you have lost a few pieces of armour along the way.    
     """
-    return s
+    answers = { 'a' : 'knight_story.part_1aaa', 'b': 'knight_story.part_1aab'}
+    return s, fyd_art.knight(), answers
 
 
 def part_1aaa():
     s = """
     You decide not to disturb them as they aren't acting normal and you manage to make your way out of the forest safely.
     """
-    return s
+    answers = { 'a' : 'knight_story.part_1aaa'}
+    return s, fyd_art.knight(), answers
 
 
 def part_1aab():
@@ -71,7 +73,8 @@ def part_1aab():
     You feel pain all over your body as they sink their teeth into your flesh.
     YOU DIED
     """
-    return s
+    answers = { 'a' : 'knight_story.part_1aab'}
+    return s, fyd_art.you_died(), answers
 
 
 def part_1ab():
@@ -81,7 +84,8 @@ def part_1ab():
     He goes limp and you push him off of your sword, you look around and try to think how and why there is a zombie out in the forest.
     You decide to head out of the forest and after a short trek you make it out safely.
     """
-    return s
+    answers = { 'a' : 'knight_story.part_1ab'}
+    return s, fyd_art.knight(), answers
 
 
 def part_1ac():
@@ -91,7 +95,8 @@ def part_1ac():
     He jumps at your face but you don’t have time to react as you stumble to the ground and he knocks your helmet off and bites into your face.
     YOU DIED
     """
-    return s
+    answers = { 'a' : 'knight_story.part_1ac'}
+    return s, fyd_art.you_died(), answers
 
 
 def part_1b():
@@ -105,7 +110,8 @@ def part_1b():
         a) Attack him.
         b) Run away from him.
     """
-    return s
+    answers = { 'a' : 'knight_story.part_1ba', 'b': 'knight_story.part_1bb'}
+    return s, fyd_art.knight(), answers
 
 
 def part_1ba():
@@ -120,7 +126,8 @@ def part_1ba():
     You slowly get up and see that his head is destroyed with his brain exposed and maggots all inside of his head.
     ‘Is that a zombie?’, you pick up your sword and notice a trail that leads out of the forest, you start limping and following it.
     """
-    return s
+    answers = { 'a' : 'knight_story.part_1ba'}
+    return s, fyd_art.knight(), answers
 
 
 def part_1bb():
@@ -141,7 +148,8 @@ def part_1bb():
     You try to push them away but they overwhelm you and you get swarmed.
     YOU DIED 
     """
-    return s
+    answers = { 'a' : 'knight_story.part_1bb'}
+    return s, fyd_art.knight(), answers
 
 
 def part_1c():
@@ -154,7 +162,8 @@ def part_1c():
         a) Attack him.
         b) Run away from him.
     """
-    return s
+    answers = { 'a' : 'knight_story.part_1ca', 'b': 'knight_story.part_1cb'}
+    return s, fyd_art.knight(), answers
 
 
 def part_1ca():
@@ -173,7 +182,8 @@ def part_1ca():
     You hear the rustling in the bush once more but you decide that whatever is in there is bad news and you kind of want to stay alive.
     You wander off in the opposite direction of the rustling and manage to get out of the forest.
     """
-    return s
+    answers = { 'a' : 'knight_story.part_1ca'}
+    return s, fyd_art.knight(), answers
 
 
 def part_1cb():
@@ -189,4 +199,5 @@ def part_1cb():
     You are now zombie meat.
     YOU DIED
     """
-    return s
+    answers = { 'a' : 'knight_story.part_1cb'}
+    return s, fyd_art.knight(), answers

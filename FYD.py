@@ -13,9 +13,11 @@ import knight_story
 import archer_story
 import wizard_story
 
+
 # Quit
 def quit():
     root.destroy()
+
 
 def game_step(name_of_step):
     """
@@ -39,9 +41,9 @@ def game_step(name_of_step):
     """
     # handy variables - matching the order of results from the method that defines the next step
     # ie, result[0] == the story
-    _story = 0 # string
-    _art = 1 # string
-    _answers = 2 # dictionary
+    _story = 0  # string
+    _art = 1  # string
+    _answers = 2  # dictionary
 
     # Get information about the step we are in
     step_info = eval( name_of_step + '()')
@@ -54,7 +56,7 @@ def game_step(name_of_step):
         set_art(step_info[_art])
 
         # Update the game state
-        global game_state # We are using the global game_state var.
+        global game_state  # We are using the global game_state var.
 
         game_state['next_step'] = step_info[_answers]
         game_state['valid_answers'] = ''
@@ -82,26 +84,29 @@ def keyPressedHandler(my_event):
             # compare uppercase to uppercase because we cant check for capslock
             if my_event.char.upper() == valid_answer.upper():
                 is_valid_answer = True
-                break # exit the loop, found an answer
+                break  # exit the loop, found an answer
 
         if is_valid_answer:
-            question_label['text'] = 'VALID ANSWER DETECTED! %s ' % ( my_event.char)
+            question_label['text'] = 'VALID ANSWER DETECTED! %s ' % (my_event.char)
             # Go to the right next step
             game_step(game_state['next_step'][my_event.char])
         else:
-            question_label['text'] = '"%s" is not a valid answer. Valid answers are one of [%s]' % ( my_event.char, game_state['valid_answers'])
+            question_label['text'] = '"%s" is not a valid answer. Valid answers are one of [%s]' % (
+            my_event.char, game_state['valid_answers'])
+
 
 """
 Updates text of a text box
 If insert_where is None, we replace the whole text. Otherwise use it as the position to insert it in.
 """
-def set_text(my_textbox, text, insert_where = None ) :
 
+
+def set_text(my_textbox, text, insert_where=None):
     # enabling because otherwise we can't change text
     my_textbox.configure(state="normal")
 
     if insert_where == None:
-        my_textbox.delete(1.0,"end")
+        my_textbox.delete(1.0, "end")
         my_textbox.insert(1.0, text)
     else:
         my_textbox.insert(insert_where, text)
@@ -109,23 +114,25 @@ def set_text(my_textbox, text, insert_where = None ) :
     # disabling to stop user editing
     my_textbox.configure(state="disabled")
 
+
 # Replace content of art panel
 def set_art(art):
     set_text(txt_art, art)
+
 
 # Replace content of story panel
 def set_story(story):
     set_text(txt_story, story)
 
+
 ########## Main section ##########
 
 # Global variables
 # State of the game - initial values
-game_state= {} # a dictionary
-game_state['character'] = 'none_yet' # FIXME needed? useful?
+game_state = {}  # a dictionary
+game_state['character'] = 'none_yet'  # FIXME needed? useful?
 game_state['current_step'] = 'intro'  # FIXME needed ?
-game_state['next_step'] = {} # This holds another dictionary
-
+game_state['next_step'] = {}  # This holds another dictionary
 
 # Creating the game GUI
 root = Tk()
@@ -141,8 +148,8 @@ root.config(menu=bar)
 screenwidth = root.winfo_screenwidth()
 screenheight = root.winfo_screenheight()
 
-root_width= int(screenwidth * 0.9)
-root_height= int(screenheight * 0.9)
+root_width = int(screenwidth * 0.9)
+root_height = int(screenheight * 0.9)
 
 top_panel_height = int(root_height * 0.96)
 
@@ -154,39 +161,40 @@ root.iconphoto(True, PhotoImage(file='icons8-icosahedron-96.png'))
 
 # ----- frames ----------
 # top frame for art + story
-top_container = Frame(root,borderwidth=0,height=top_panel_height)
+top_container = Frame(root, borderwidth=0, height=top_panel_height)
 
-top_container.pack(side='top',fill='both', expand=True, pady=0, padx=0)
-top_container.grid_rowconfigure(0,weight=1)
-top_container.grid_columnconfigure(0,weight=1)
-top_container.grid_columnconfigure(1,weight=1)
+top_container.pack(side='top', fill='both', expand=True, pady=0, padx=0)
+top_container.grid_rowconfigure(0, weight=1)
+top_container.grid_columnconfigure(0, weight=1)
+top_container.grid_columnconfigure(1, weight=1)
 top_container.grid_propagate(False)
 
 # Bottom frame for question and answer
-bottom_container = Frame(root,borderwidth=0,bg='black',height=(root_height-top_panel_height))
+bottom_container = Frame(root, borderwidth=0, bg='black', height=(root_height - top_panel_height))
 
-bottom_container.pack(side='bottom',fill='both', expand = True)
-bottom_container.grid_rowconfigure(0,weight=1)
-bottom_container.grid_columnconfigure(0,weight=1)
-bottom_container.grid_columnconfigure(1,weight=1)
+bottom_container.pack(side='bottom', fill='both', expand=True)
+bottom_container.grid_rowconfigure(0, weight=1)
+bottom_container.grid_columnconfigure(0, weight=1)
+bottom_container.grid_columnconfigure(1, weight=1)
 bottom_container.grid_propagate(False)
 
 # ----- text boxes ----------
-main_txt_config = {'foreground': "white", 'background' : "black", 'state':'normal', 'height': top_panel_height, 'border': 0}
+main_txt_config = {'foreground': "white", 'background': "black", 'state': 'normal', 'height': top_panel_height,
+                   'border': 0}
 font_art = Font(family="Courier", size=15)
 font_story = Font(family="Courier", size=15)
 
 # Passing the default config. Each one has a different font, so we pass this too
-txt_art = Text(top_container, font = font_art, **main_txt_config)
-txt_art.grid(row=0,column=0,sticky='nw')
+txt_art = Text(top_container, font=font_art, **main_txt_config)
+txt_art.grid(row=0, column=0, sticky='nw')
 
-txt_story = Text(top_container, font = font_story, **main_txt_config)
-txt_story.grid(row=0,column=1,sticky='ne')
+txt_story = Text(top_container, font=font_story, **main_txt_config)
+txt_story.grid(row=0, column=1, sticky='ne')
 
 # ----------
 question_label = Label(bottom_container)
-question_label.grid(row=0,column=0,sticky='e')
-question_label.configure(font=Font(family="Helvetica", size=18) , fg='red' )
+question_label.grid(row=0, column=0, sticky='e')
+question_label.configure(font=Font(family="Helvetica", size=18), fg='red')
 question_label['text'] = 'Choose your action!'
 
 # Catch all key presses

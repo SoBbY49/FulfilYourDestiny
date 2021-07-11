@@ -1,3 +1,6 @@
+import fyd_art
+
+
 def part_3():
     s = """
     You wake up to find yourself in darkness.
@@ -21,7 +24,9 @@ def part_3():
         b) Cast fireball.
         c) Cast invisibility.
     """
-    return s
+    answers = {'a': 'wizard_story.part_3a', 'b': 'wizard_story.part_3b', 'c': 'wizard_story.part_3c'}
+    return s, fyd_art.wizard(), answers
+
 
 
 def part_3a():
@@ -39,7 +44,8 @@ def part_3a():
         b) Cast fireball.
         c) Cast invisibility.
     """
-    return s
+    answers = {'a': 'wizard_story.part_3aa', 'b': 'wizard_story.part_3ab', 'c': 'wizard_story.part_3ac'}
+    return s, fyd_art.wizard(), answers
 
 
 def part_3aa():
@@ -51,7 +57,8 @@ def part_3aa():
     The man picks the gem up and crushes it in his hand, he opens his hand and pours the gem that is now sand onto the ground.
     YOU DIED
     """
-    return s
+    answers = {'a': 'wizard_story.part_3aa'}
+    return s, fyd_art.wizard(), answers
 
 
 def part_3ab():
@@ -63,7 +70,8 @@ def part_3ab():
     He shakily gets up using the large axe and starts walking limping towards you.
     You run up the stairs.
     """
-    return s
+    answers = {'a': 'wizard_story.part_3ab'}
+    return s, fyd_art.wizard(), answers
 
 
 def part_3ac():
@@ -73,7 +81,8 @@ def part_3ac():
     The man starts destroying everything in the room trying to find you.
     You creep up the stairs out of the room.
     """
-    return s
+    answers = {'a': 'wizard_story.part_3ac'}
+    return s, fyd_art.wizard(), answers
 
 
 def part_3b():
@@ -87,7 +96,8 @@ def part_3b():
         a) Jump out of his way
         b) Cast invisibility.
     """
-    return s
+    answers = {'a': 'wizard_story.part_3ba', 'b': 'wizard_story.part_3bb'}
+    return s, fyd_art.wizard(), answers
 
 
 def part_3ba():
@@ -104,7 +114,8 @@ def part_3ba():
     The man runs at you and slices his axe down onto you.
     YOU DIED
     """
-    return s
+    answers = {'a': 'wizard_story.part_3ba'}
+    return s, fyd_art.wizard(), answers
 
 
 def part_3bb():
@@ -114,7 +125,8 @@ def part_3bb():
     The man starts destroying everything in the room trying to find you.
     You creep up the stairs out of the room.
     """
-    return s
+    answers = {'a': 'wizard_story.part_3bb'}
+    return s, fyd_art.wizard(), answers
 
 
 def part_3c():
@@ -130,7 +142,8 @@ def part_3c():
         a) Keep standing there, you can probably stay invisible for a long time...right?
         b) Go upstairs.
     """
-    return s
+    answers = {'a': 'wizard_story.part_3ca', 'b': 'wizard_story.part_3cb'}
+    return s, fyd_art.wizard(), answers
 
 
 def part_3ca():
@@ -142,7 +155,8 @@ def part_3ca():
     The man gets of his chair and throws the huge axe at you, slicing you down the middle.
     YOU DIED 
     """
-    return s
+    answers = {'a': 'wizard_story.part_3ca'}
+    return s, fyd_art.wizard(), answers
 
 
 def part_3cb():
@@ -151,4 +165,5 @@ def part_3cb():
     As soon as you get out of view of the room you begin to see your hands again.
     The invisibility spell just ran out, that was close.
     """
-    return s
+    answers = {'a': 'wizard_story.part_3cb'}
+    return s, fyd_art.wizard(), answers

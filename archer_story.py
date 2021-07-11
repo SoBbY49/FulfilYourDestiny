@@ -1,3 +1,6 @@
+import fyd_art
+
+
 def part_2():
     s = """
     ‘Bang bang bang bang’, your eyes open suddenly as you feel your face on the cold stone floor you are lying on.
@@ -19,7 +22,8 @@ def part_2():
         b) You take out your dagger and run at him.
         c) You play dumb and tell the guard that you thought this was the cafeteria.
     """
-    return s
+    answers = {'a': 'archer_story.part_2a', 'b': 'archer_story.part_2b', 'c': 'archer_story.part_2c'}
+    return s, fyd_art.archer(), answers
 
 
 def part_2a():
@@ -33,7 +37,8 @@ def part_2a():
         a) Hide and leave the guards body on the floor.
         b) Hide the guards body but not yourself.
     """
-    return s
+    answers = {'a': 'archer_story.part_2aa', 'b': 'archer_story.part_2ab'}
+    return s, fyd_art.archer(), answers
 
 
 def part_2aa():
@@ -48,7 +53,8 @@ def part_2aa():
     They run at you with their swords.
     YOU DIED
     """
-    return s
+    answers = {'a': 'archer_story.part_2aa'}
+    return s, fyd_art.archer(), answers
 
 
 def part_2ab():
@@ -60,7 +66,8 @@ def part_2ab():
     It slices into his neck and he falls against the wall in the hallway.
     You walk over to him and take your dagger back, you begin to find a way out. 
     """
-    return s
+    answers = {'a': 'archer_story.part_2ab'}
+    return s, fyd_art.archer(), answers
 
 
 def part_2b():
@@ -73,7 +80,8 @@ def part_2b():
         a) Leave the room and go the way all the other prisoners went.
         b) Put on the guards clothes and go the way all the other prisoners went.
     """
-    return s
+    answers = {'a': 'archer_story.part_2ba', 'b': 'archer_story.part_2bb'}
+    return s, fyd_art.archer(), answers
 
 
 def part_2ba():
@@ -86,7 +94,8 @@ def part_2ba():
     He opens his eyes and looks at you.
     The guards don't know you are there yet.
     """
-    return s
+    answers = {'a': 'archer_story.part_2ba'}
+    return s, fyd_art.archer(), answers
 
 
 def part_2bb():
@@ -99,7 +108,8 @@ def part_2bb():
     He opens his eyes and looks at you, it seems like he knows that its you even though you are in disguise.
     The guards see you, thinking that you are also a guard they tell you to join in.
     """
-    return s
+    answers = {'a': 'archer_story.part_2bb'}
+    return s, fyd_art.archer(), answers
 
 
 def part_2c():
@@ -112,7 +122,8 @@ def part_2c():
         a) Before he can put the handcuffs completely on your wrists you pull you dagger out of your pocket and attack him.
         b) Let him put handcuffs on your wrists.
     """
-    return s
+    answers = {'a': 'archer_story.part_2ca', 'b': 'archer_story.part_2cb'}
+    return s, fyd_art.archer(), answers
 
 
 def part_2ca():
@@ -125,7 +136,8 @@ def part_2ca():
     'I said not to try anything funny' he tells you.
     YOU DIED
     """
-    return s
+    answers = {'a': 'archer_story.part_2ca'}
+    return s, fyd_art.archer(), answers
 
 
 def part_2cb():
@@ -136,4 +148,5 @@ def part_2cb():
     With your wrists still in handcuffs you dislocate both your thumbs and slip your hands through the handcuffs.
     You drop your handcuffs and the guard walking you looks down at them, you pul your dagger out and slice his throat. 
     """
-    return s
+    answers = {'a': 'archer_story.part_2cb'}
+    return s, fyd_art.archer(), answers
