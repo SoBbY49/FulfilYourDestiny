@@ -4,6 +4,7 @@ from tkinter import *
 from tkinter import ttk
 from tkinter.font import Font
 from fyd_art import *
+import string
 
 # Definitions for general game stuff (startup, final, etc)
 from all_story import *
@@ -17,6 +18,17 @@ import wizard_story
 # Quit
 def quit():
     root.destroy()
+
+
+def increase_font():
+    f = Font(family="Courier", size=20)
+    txt_story.configure(font=f)
+
+
+def decrease_font():
+    f = Font(family="Courier", size=10)
+    txt_story.configure(font=f)
+
 
 
 def game_step(name_of_step):
@@ -46,7 +58,7 @@ def game_step(name_of_step):
     _answers = 2  # dictionary
 
     # Get information about the step we are in
-    step_info = eval( name_of_step + '()')
+    step_info = eval(name_of_step + '()')
 
     # if we called quit, the window was destroyed and there is no more game. So dont do anything
     if name_of_step != 'quit':
@@ -92,7 +104,7 @@ def keyPressedHandler(my_event):
             game_step(game_state['next_step'][my_event.char])
         else:
             question_label['text'] = '"%s" is not a valid answer. Valid answers are one of [%s]' % (
-            my_event.char, game_state['valid_answers'])
+                my_event.char, game_state['valid_answers'])
 
 
 """
@@ -143,7 +155,13 @@ bar = tkinter.Menu(root)
 fileMenu = tkinter.Menu(bar, tearoff=0)
 fileMenu.add_command(label="Exit", command=quit)
 bar.add_cascade(label="File", menu=fileMenu)
+
+fontMenu = tkinter.Menu(bar, tearoff=0)
+fontMenu.add_command(label="Increase", command=increase_font, accelerator="Control-plus")
+fontMenu.add_command(label="Decrease", command=decrease_font, accelerator="Control-minus")
+bar.add_cascade(label="Font Size", menu=fontMenu)
 root.config(menu=bar)
+
 
 screenwidth = root.winfo_screenwidth()
 screenheight = root.winfo_screenheight()
@@ -198,7 +216,8 @@ question_label.configure(font=Font(family="Helvetica", size=18), fg='red')
 question_label['text'] = 'Choose your action!'
 
 # Catch all key presses
-root.bind('<KeyRelease>', keyPressedHandler)
+for i in ( string.ascii_letters + string.digits):
+    root.bind(i, keyPressedHandler)
 
 game_step('intro')
 
