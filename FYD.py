@@ -20,15 +20,14 @@ def quit():
     root.destroy()
 
 
-def increase_font():
-    f = Font(family="Courier", size=20)
-    txt_story.configure(font=f)
+def increase_font(key=''):
+    font_art.configure(size=(font_art.cget('size') + font_art_size_step))
+    font_story.configure(size=(font_story.cget('size') + font_story_size_step))
 
 
-def decrease_font():
-    f = Font(family="Courier", size=10)
-    txt_story.configure(font=f)
-
+def decrease_font(key=''):
+    font_art.configure(size=(font_art.cget('size') - font_art_size_step))
+    font_story.configure(size=(font_story.cget('size') - font_story_size_step))
 
 
 def game_step(name_of_step):
@@ -146,6 +145,10 @@ game_state['character'] = 'none_yet'  # FIXME needed? useful?
 game_state['current_step'] = 'intro'  # FIXME needed ?
 game_state['next_step'] = {}  # This holds another dictionary
 
+# How much font size to increase and decrease the font by
+font_art_size_step = 2
+font_story_size_step = 2
+
 # Creating the game GUI
 root = Tk()
 root.title("Fulfil Your Destiny")
@@ -157,8 +160,10 @@ fileMenu.add_command(label="Exit", command=quit)
 bar.add_cascade(label="File", menu=fileMenu)
 
 fontMenu = tkinter.Menu(bar, tearoff=0)
-fontMenu.add_command(label="Increase", command=increase_font, accelerator="Control-plus")
-fontMenu.add_command(label="Decrease", command=decrease_font, accelerator="Control-minus")
+fontMenu.add_command(label="Increase", command=increase_font, accelerator="Control++")
+root.bind_all('<Control-plus>',increase_font)
+fontMenu.add_command(label="Decrease", command=decrease_font, accelerator="Control+-")
+root.bind_all('<Control-minus>',decrease_font)
 bar.add_cascade(label="Font Size", menu=fontMenu)
 root.config(menu=bar)
 
