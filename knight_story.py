@@ -1,5 +1,5 @@
 import fyd_art
-
+import dice_roll
 
 def part_1():
     s = """
@@ -38,22 +38,40 @@ def part_1a():
 
 
 def part_1aa():
-    s = """ ROLL D20.
-    SUCCESS- You slowly creep backwards, away from the young boy and sneakily get out of view from him.
-    As you keep walking you hear some loud clanking, you hide behind a tree and see your fellow knights limping and wandering around.
-        What do you do?
-        a) Sneak away from them.
-        b) Walk up to them.
-            
-    FAIL- You try to sneak away from the boy but as you walk away you step on a sick and a loud ‘CRACK’ awakens the boy.
-    The boy gets up and you see his pale eyes and rotten skin much better now.
-    He begins to run at you and as he gets closer you whack your shield against him and he gets knocked away onto the floor.
-    He lunges at you again and latches onto your foot and starts to tear away the armour on your leg, you kick him off and run away.
-    As you start making distance away from him you see your fellow soldiers limping towards you with their armour stripped from their body and their pale skin.
-    You manage to make it out of the forest but you have lost a few pieces of armour along the way.    
-    """
-    answers = { 'a' : 'knight_story.part_1aaa', 'b': 'knight_story.part_1aab'}
-    return s, fyd_art.knight(), answers
+    # roll the dice = random number between 1 and 20
+    # print random number in d20 on art screen
+    # if result = between 1 and 10 then = fail
+    diceresult = dice_roll.rolld20()
+    if diceresult <11:
+        s = """
+        
+        You try to sneak away from the boy but as you walk away you step on a sick and a loud ‘CRACK’ awakens the boy.
+        The boy gets up and you see his pale eyes and rotten skin much better now.
+        He begins to run at you and as he gets closer you whack your shield against him and he gets knocked away onto the floor.
+        He lunges at you again and latches onto your foot and starts to tear away the armour on your leg, you kick him off and run away.
+        As you start making distance away from him you see your fellow soldiers limping towards you with their armour stripped from their body and their pale skin.
+        You manage to make it out of the forest but you have lost a few pieces of armour along the way.
+        """
+
+        art = "Unlucky roll!!\n\n\n%s" % ( diceresult, fyd_art.d20(diceresult))
+
+        answers = {}
+    else:
+        s = """
+        
+        You slowly creep backwards, away from the young boy and sneakily get out of view from him.
+        As you keep walking you hear some loud clanking, you hide behind a tree and see your fellow knights limping and wandering around.
+            What do you do?
+            a) Sneak away from them.
+            b) Walk up to them.
+            """
+
+        art = "Woah nice roll!!\n\n\n%s" % ( diceresult, fyd_art.d20(diceresult))
+
+        answers = {'a': 'knight_story.part_1aaa', 'b': 'knight_story.part_1aab'}
+
+
+    return s, art , answers
 
 
 def part_1aaa():

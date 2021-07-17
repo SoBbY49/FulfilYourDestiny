@@ -76,7 +76,7 @@ def game_step(name_of_step):
             game_state['valid_answers'] = game_state['valid_answers'] + answer
 
 
-def keyPressedHandler(my_event):
+def HandleKeyPress(my_event):
     """Event handler for any key pressed.
     This is where we check what the player chose and keep the game moving forward.
 
@@ -106,13 +106,11 @@ def keyPressedHandler(my_event):
                 my_event.char, game_state['valid_answers'])
 
 
-"""
-Updates text of a text box
-If insert_where is None, we replace the whole text. Otherwise use it as the position to insert it in.
-"""
-
-
 def set_text(my_textbox, text, insert_where=None):
+    """
+    Updates text of a text box
+    If insert_where is None, we replace the whole text. Otherwise use it as the position to insert it in.
+    """
     # enabling because otherwise we can't change text
     my_textbox.configure(state="normal")
 
@@ -222,7 +220,7 @@ question_label['text'] = 'Choose your action!'
 
 # Catch all key presses
 for i in ( string.ascii_letters + string.digits):
-    root.bind(i, keyPressedHandler)
+    root.bind(i, HandleKeyPress)
 
 game_step('intro')
 
