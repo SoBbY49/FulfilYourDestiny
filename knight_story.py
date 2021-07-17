@@ -38,14 +38,11 @@ def part_1a():
 
 
 def part_1aa():
-    # roll the dice = random number between 1 and 20
-    # print random number in d20 on art screen
-    # if result = between 1 and 10 then = fail
     diceresult = dice_roll.rolld20()
     if diceresult <11:
         s = """
         
-        You try to sneak away from the boy but as you walk away you step on a sick and a loud ‘CRACK’ awakens the boy.
+        You try to sneak away from the boy but as you walk away you step on a sick and a loud ‘CRACK’ awakens him.
         The boy gets up and you see his pale eyes and rotten skin much better now.
         He begins to run at you and as he gets closer you whack your shield against him and he gets knocked away onto the floor.
         He lunges at you again and latches onto your foot and starts to tear away the armour on your leg, you kick him off and run away.
@@ -53,7 +50,7 @@ def part_1aa():
         You manage to make it out of the forest but you have lost a few pieces of armour along the way.
         """
 
-        art = "Unlucky roll!!\n\n\n%s" % ( diceresult, fyd_art.d20(diceresult))
+        art = "Unlucky roll!!\n\n\n%s" % (fyd_art.d20(diceresult))
 
         answers = {}
     else:
@@ -66,11 +63,9 @@ def part_1aa():
             b) Walk up to them.
             """
 
-        art = "Woah nice roll!!\n\n\n%s" % ( diceresult, fyd_art.d20(diceresult))
+        art = "Woah nice roll!!\n\n\n%s" % (fyd_art.d20(diceresult))
 
         answers = {'a': 'knight_story.part_1aaa', 'b': 'knight_story.part_1aab'}
-
-
     return s, art , answers
 
 
@@ -133,41 +128,66 @@ def part_1b():
 
 
 def part_1ba():
-    s = """ ROLL D20.
-    SUCCESS- As he falls to the ground and attempts to get up you swing your sword down and cut off his head.
-    He goes limp and you try and catch your breath. ‘Was that...a zombie?’.
-    You look at your surroundings and see a trail that leads off out of the forest, you decide to follow it.
-    
-    FAIL- You swing your sword at the boy who is now on the ground but you lose your footing and slip on some leaves.
-    As you miss the boy the sword gets stuck in the ground and you fall onto your back.
-    The boy jumps back onto your shield and starts to swing at you, you start punching him until he falls to the ground.
-    You slowly get up and see that his head is destroyed with his brain exposed and maggots all inside of his head.
-    ‘Is that a zombie?’, you pick up your sword and notice a trail that leads out of the forest, you start limping and following it.
-    """
-    answers = { 'a' : 'knight_story.part_1ba'}
-    return s, fyd_art.knight(), answers
+    diceresult = dice_roll.rolld20()
+    if diceresult <11:
+        s = """
+        
+        You swing your sword at the boy who is now on the ground but you lose your footing and slip on some leaves.
+        As you miss the boy the sword gets stuck in the ground and you fall onto your back.
+        The boy jumps back onto your shield and starts to swing at you, you start punching him until he falls to the ground.
+        You slowly get up and see that his head is destroyed with his brain exposed and maggots all inside of his head.
+        ‘Is that a zombie?’, you pick up your sword and notice a trail that leads out of the forest, you start limping and following it.
+        """
+
+        art = "Unlucky roll!!\n\n\n%s" % (fyd_art.d20(diceresult))
+
+        answers = {}
+    else:
+        s = """
+        
+        As he falls to the ground and attempts to get up you swing your sword down and cut off his head.
+        He goes limp and you try and catch your breath. ‘Was that...a zombie?’.
+        You look at your surroundings and see a trail that leads off out of the forest, you decide to follow it.
+        """
+
+        art = "Woah nice roll!!\n\n\n%s" % (fyd_art.d20(diceresult))
+
+        answers = { 'a' : 'knight_story.part_1ba'}
+    return s, art , answers
 
 
 def part_1bb():
-    s = """ ROLL D20.
-    SUCCESS- The boy falls to the ground and you turn around and run as fast as you can.
-    You look back behind you and the boy is on all fours running towards you.
-    You turn your head back in the direction you are running and right in front of you are your fellow knights.
-    But they look like the young boy as they have pale, rotten skin and white eyes.
-    You manage to move out of the way in time as they attempt to reach you with their sharp nails.
-    You continue running until you reach the outskirts of the forest.
-    
-    FAIL- The boy falls to the ground and you turn around and run as fast as you can.
-    You look back behind you and the boy is on all fours running towards you.
-    You turn your head back in the direction you are running and right in front of you are your fellow knights.
-    But they look like the young boy as they have pale, rotten skin and white eyes.
-    You try to get out of their way but they manage to latch onto you and pull you towards them.
-    You swing your sword at them and manage to cut a few of their arms off but as they claw at you they take some armour off of your body.
-    You try to push them away but they overwhelm you and you get swarmed.
-    YOU DIED 
-    """
-    answers = { 'a' : 'knight_story.part_1bb'}
-    return s, fyd_art.knight(), answers
+    diceresult = dice_roll.rolld20()
+    if diceresult <11:
+        s = """
+        
+        The boy falls to the ground and you turn around and run as fast as you can.
+        You look back behind you and the boy is on all fours running towards you.
+        You turn your head back in the direction you are running and right in front of you are your fellow knights.
+        But they look like the young boy as they have pale, rotten skin and white eyes.
+        You try to get out of their way but they manage to latch onto you and pull you towards them.
+        You swing your sword at them and manage to cut a few of their arms off but as they claw at you they take some armour off of your body.
+        You try to push them away but they overwhelm you and you get swarmed.
+        YOU DIED
+        """
+
+        art = "Unlucky roll!!\n\n\n%s" % (fyd_art.d20(diceresult))
+
+        answers = {}
+    else:
+        s = """
+        The boy falls to the ground and you turn around and run as fast as you can.
+        You look back behind you and the boy is on all fours running towards you.
+        You turn your head back in the direction you are running and right in front of you are your fellow knights.
+        But they look like the young boy as they have pale, rotten skin and white eyes.
+        You manage to move out of the way in time as they attempt to reach you with their sharp nails.
+        You continue running until you reach the outskirts of the forest.
+        """
+
+        art = "Woah nice roll!!\n\n\n%s" % (fyd_art.d20(diceresult))
+
+        answers = {'a': 'knight_story.part_1bb'}
+    return s, art , answers
 
 
 def part_1c():
@@ -185,37 +205,59 @@ def part_1c():
 
 
 def part_1ca():
-    s = """ ROLL D20.
-    SUCCESS- As they slowly walk up to you, one by one you hack and slash at them until they are all fully dead.
-    You try to catch your breath and you hear the same rustling from behind you.
-    You whip around and there is a young boy running all fours at you and he also looks undead.
-    He jumps at you and you block him with your shield.
-    He bounces off your shield and you swing at him and with one clean cut you slice his head off.
-    You look at your surroundings to see if there's a way out of the forest.
-    You see a trail that you follow, it eventually leads you out of the forest.
-    
-    FAIL- You attempt to kill them but you get outnumbered.
-    You swing your sword at them and manage to cut a few of their arms off but as they claw at you they take some armour off of your body.
-    You do manage to kill them but at the cost of some of your armour that they manage to tear off of you.
-    You hear the rustling in the bush once more but you decide that whatever is in there is bad news and you kind of want to stay alive.
-    You wander off in the opposite direction of the rustling and manage to get out of the forest.
-    """
-    answers = { 'a' : 'knight_story.part_1ca'}
-    return s, fyd_art.knight(), answers
+    diceresult = dice_roll.rolld20()
+    if diceresult <11:
+        s = """
+        You attempt to kill them but you get outnumbered.
+        You swing your sword at them and manage to cut a few of their arms off but as they claw at you they take some armour off of your body.
+        You do manage to kill them but at the cost of some of your armour that they manage to tear off of you.
+        You hear the rustling in the bush once more but you decide that whatever is in there is bad news and you kind of want to stay alive.
+        You wander off in the opposite direction of the rustling and manage to get out of the forest.
+        """
+
+        art = "Unlucky roll!!\n\n\n%s" % (fyd_art.d20(diceresult))
+
+        answers = {}
+    else:
+        s = """
+        As they slowly walk up to you, one by one you hack and slash at them until they are all fully dead.
+        You try to catch your breath and you hear the same rustling from behind you.
+        You whip around and there is a young boy running all fours at you and he also looks undead.
+        He jumps at you and you block him with your shield.
+        He bounces off your shield and you swing at him and with one clean cut you slice his head off.
+        You look at your surroundings to see if there's a way out of the forest.
+        You see a trail that you follow, it eventually leads you out of the forest.
+        """
+
+        art = "Woah nice roll!!\n\n\n%s" % (fyd_art.d20(diceresult))
+
+        answers = { 'a' : 'knight_story.part_1ca'}
+    return s, art, answers
 
 
 def part_1cb():
-    s = """ ROLL D20.
-    SUCCESS- You decide not to fight them and you run the opposite direction.
-    You now find yourself outside of the forest.
-    
-    FAIL- You attempt to run away from them but as you start to run you hear the rustling again.
-    Out runs on all fours a young boy who also looks undead.
-    He jumps at you and you get tackled to the floor.
-    As he pushed you to the floor your sword and shield flew out of your hands.
-    You are now pinned to the ground by the young boy and the other zombies are making their way towards you.
-    You are now zombie meat.
-    YOU DIED
-    """
-    answers = { 'a' : 'knight_story.part_1cb'}
-    return s, fyd_art.knight(), answers
+    diceresult = dice_roll.rolld20()
+    if diceresult <11:
+        s = """
+        You attempt to run away from them but as you start to run you hear the rustling again.
+        Out runs on all fours a young boy who also looks undead.
+        He jumps at you and you get tackled to the floor.
+        As he pushed you to the floor your sword and shield flew out of your hands.
+        You are now pinned to the ground by the young boy and the other zombies are making their way towards you.
+        You are now zombie meat.
+        YOU DIED
+        """
+
+        art = "Unlucky roll!!\n\n\n%s" % (fyd_art.d20(diceresult))
+
+        answers = {}
+    else:
+        s = """
+        You decide not to fight them and you run the opposite direction.
+        You now find yourself outside of the forest.
+        """
+
+        art = "Woah nice roll!!\n\n\n%s" % (fyd_art.d20(diceresult))
+
+        answers = { 'a' : 'knight_story.part_1cb'}
+    return s, art , answers

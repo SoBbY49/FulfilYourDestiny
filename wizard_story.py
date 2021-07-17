@@ -1,4 +1,5 @@
 import fyd_art
+import dice_roll
 
 
 def part_3():
@@ -101,21 +102,32 @@ def part_3b():
 
 
 def part_3ba():
-    s = """ ROLL D20.
-    SUCCESS- You manage to jump out of the man's way in time and he slices the bookshelves that were near you in half.
-    You wasn't able to slow down in time and runs through the bookshelves into the wall.
-    The room shakes and parts of rock start to fall down from the ceiling.
-    You run towards the stairs hoping to get out of the room before the room collapses.
-    The man locks onto you and charges ypu once again.
-    You manage to get up the stairs before he runs into the staircase turning the stairs to rubble.
-    You see the huge rocks fall from the staircase onto the man and it goes quiet.
-    
-    FAIL- You try to jump out of the way but you trip over your leg and fall to the ground.
-    The man runs at you and slices his axe down onto you.
-    YOU DIED
-    """
-    answers = {'a': 'wizard_story.part_3ba'}
-    return s, fyd_art.wizard(), answers
+    diceresult = dice_roll.rolld20()
+    if diceresult <11:
+        s = """
+        You try to jump out of the way but you trip over your leg and fall to the ground.
+        The man runs at you and slices his axe down onto you.
+        YOU DIED
+        """
+
+        art = "Unlucky roll!!\n\n\n%s" % (fyd_art.d20(diceresult))
+
+        answers = {}
+    else:
+        s = """
+        You manage to jump out of the man's way in time and he slices the bookshelves that were near you in half.
+        You wasn't able to slow down in time and runs through the bookshelves into the wall.
+        The room shakes and parts of rock start to fall down from the ceiling.
+        You run towards the stairs hoping to get out of the room before the room collapses.
+        The man locks onto you and charges ypu once again.
+        You manage to get up the stairs before he runs into the staircase turning the stairs to rubble.
+        You see the huge rocks fall from the staircase onto the man and it goes quiet.
+        """
+
+        art = "Woah nice roll!!\n\n\n%s" % (fyd_art.d20(diceresult))
+
+        answers = {'a': 'wizard_story.part_3ba'}
+    return s, art , answers
 
 
 def part_3bb():

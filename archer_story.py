@@ -1,4 +1,5 @@
 import fyd_art
+import dice_roll
 
 
 def part_2():
@@ -42,19 +43,29 @@ def part_2a():
 
 
 def part_2aa():
-    s = """ ROLL D20.
-    SUCCESS- You hide behind the door and leave the guards body on the floor as you hear a pair of footsteps walk towards your room.
-    The two guards see the body and sound the alarm, you hear guards shouting that a prisoner is loose.
-    The guards pick up the body and take it away.
-    It's going to be pretty hard to escape now.
-    
-    FAIL- You attempt to hide but your heart starts beating faster and faster as you hear the pair of footsteps coming close.
-    The two guards enter the room and they see you in the middle of the room with the guards body on the floor.
-    They run at you with their swords.
-    YOU DIED
-    """
-    answers = {'a': 'archer_story.part_2aa'}
-    return s, fyd_art.archer(), answers
+    diceresult = dice_roll.rolld20()
+    if diceresult <11:
+        s = """
+        You attempt to hide but your heart starts beating faster and faster as you hear the pair of footsteps coming close.
+        The two guards enter the room and they see you in the middle of the room with the guards body on the floor.
+        They run at you with their swords.
+        YOU DIED
+        """
+
+        art = "Unlucky roll!!\n\n\n%s" % (fyd_art.d20(diceresult))
+
+        answers = {}
+    else:
+        s = """
+        You hide behind the door and leave the guards body on the floor as you hear a pair of footsteps walk towards your room.
+        The two guards see the body and sound the alarm, you hear guards shouting that a prisoner is loose.
+        The guards pick up the body and take it away.
+        It's going to be pretty hard to escape now.
+        """
+
+        art =  "Woah nice roll!!\n\n\n%s" % (fyd_art.d20(diceresult))
+        answers = {'a': 'archer_story.part_2aa'}
+    return s, art, answers
 
 
 def part_2ab():
@@ -127,17 +138,27 @@ def part_2c():
 
 
 def part_2ca():
-    s = """ ROLL D20.
-    SUCCESS- You manage to pull your hand away from the handcuffs and pull out your dagger.
-    You slash the knife at the guard and it slices his throat.
-    You put his body under the pile of weapons and you get ready to leave the room.
-    
-    FAIL- You pull your hand away from the handcuffs but not quick enough because the guard has the sword pointed at your face.
-    'I said not to try anything funny' he tells you.
-    YOU DIED
-    """
-    answers = {'a': 'archer_story.part_2ca'}
-    return s, fyd_art.archer(), answers
+    diceresult = dice_roll.rolld20()
+    if diceresult <11:
+        s = """
+        You pull your hand away from the handcuffs but not quick enough because the guard has the sword pointed at your face.
+        'I said not to try anything funny' he tells you.
+        YOU DIED
+        """
+
+        art = "Unlucky roll!!\n\n\n%s" % (fyd_art.d20(diceresult))
+
+        answers = {}
+    else:
+        s = """
+        
+        You manage to pull your hand away from the handcuffs and pull out your dagger.
+        You slash the knife at the guard and it slices his throat.
+        You put his body under the pile of weapons and you get ready to leave the room.
+        """
+
+        answers = {'a': 'archer_story.part_2ca'}
+    return s, art, answers
 
 
 def part_2cb():
