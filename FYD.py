@@ -209,10 +209,10 @@ font_story = Font(family="Courier", size=15)
 
 # Passing the default config. Each one has a different font, so we pass this too
 txt_art = Text(top_container, font=font_art, **main_txt_config)
-txt_art.grid(row=0, column=0, sticky='nw')
+txt_art.grid(row=0, column=0, sticky='nwse')
 
 txt_story = Text(top_container, font=font_story, **main_txt_config)
-txt_story.grid(row=0, column=1, sticky='ne')
+txt_story.grid(row=0, column=1, sticky='nwse')
 
 # ----------
 question_label = Label(bottom_container)
