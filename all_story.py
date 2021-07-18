@@ -44,7 +44,7 @@ a) Archemides, the astonishing Archer from Anatolia
 w) Willy, the woeful Wizard from Wurstland
     """
 
-    art = "%s\n\n%s\n\n%s" % (fyd_art.smallknight(), fyd_art.smallarcher(), fyd_art.smallwizard())
+    art = "%s" % (fyd_art.smallknight_archer_wizard())
 
     answers = {
         'k': 'knight_story.part_1',
