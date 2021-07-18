@@ -1,8 +1,11 @@
 # Create app using with separating widget
+import os
 import tkinter
 from tkinter import *
 from tkinter import ttk
 from tkinter.font import Font
+
+
 from fyd_art import *
 import string
 
@@ -18,6 +21,10 @@ import wizard_story
 # Quit
 def quit():
     root.destroy()
+
+
+def restart(key=''):
+    game_step("intro")
 
 
 def increase_font(key=''):
@@ -98,12 +105,8 @@ def HandleKeyPress(my_event):
                 break  # exit the loop, found an answer
 
         if is_valid_answer:
-            question_label['text'] = 'VALID ANSWER DETECTED! %s ' % (my_event.char)
             # Go to the right next step
             game_step(game_state['next_step'][my_event.char])
-        else:
-            question_label['text'] = '"%s" is not a valid answer. Valid answers are one of [%s]' % (
-                my_event.char, game_state['valid_answers'])
 
 
 def set_text(my_textbox, text, insert_where=None):
@@ -140,7 +143,6 @@ def set_story(story):
 # State of the game - initial values
 game_state = {}  # a dictionary
 game_state['character'] = 'none_yet'  # FIXME needed? useful?
-game_state['current_step'] = 'intro'  # FIXME needed ?
 game_state['next_step'] = {}  # This holds another dictionary
 
 # How much font size to increase and decrease the font by
@@ -154,6 +156,9 @@ root.title("Fulfil Your Destiny")
 # Custom menu
 bar = tkinter.Menu(root)
 fileMenu = tkinter.Menu(bar, tearoff=0)
+fileMenu.add_command(label="Restart", command=restart, accelerator="Control+r")
+root.bind_all('<Control-r>',restart)
+fileMenu.add_separator(())
 fileMenu.add_command(label="Exit", command=quit)
 bar.add_cascade(label="File", menu=fileMenu)
 
@@ -202,7 +207,7 @@ bottom_container.grid_propagate(False)
 # ----- text boxes ----------
 main_txt_config = {'foreground': "white", 'background': "black", 'state': 'normal', 'height': top_panel_height,
                    'border': 0}
-font_art = Font(family="Courier", size=15)
+font_art = Font(family="Courier", size=13)
 font_story = Font(family="Courier", size=15)
 
 # Passing the default config. Each one has a different font, so we pass this too
@@ -212,11 +217,6 @@ txt_art.grid(row=0, column=0, sticky='nwse')
 txt_story = Text(top_container, font=font_story, **main_txt_config)
 txt_story.grid(row=0, column=1, sticky='nwse')
 
-# ----------
-question_label = Label(bottom_container)
-question_label.grid(row=0, column=0, sticky='e')
-question_label.configure(font=Font(family="Helvetica", size=18), fg='red')
-question_label['text'] = 'Choose your action!'
 
 # Catch all key presses
 for i in ( string.ascii_letters + string.digits):
