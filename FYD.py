@@ -183,7 +183,7 @@ root_geometry = '%dx%d+%d+%d' % (root_width, root_height, (screenwidth - root_wi
 root.geometry(root_geometry)
 root.configure(bg='black')
 root.resizable(width=False, height=False)
-root.iconphoto(True, PhotoImage(file='icons8-icosahedron-96.png'))
+root.iconphoto(True, PhotoImage(file='Data/icons8-icosahedron-96.png'))
 
 # ----- frames ----------
 # top frame for art + story
