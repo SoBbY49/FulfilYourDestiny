@@ -39,3 +39,12 @@ print("All my adjectives: %s" % (adjectives) )
 print("All my consonants: %s" % (consonants) )
 print("All my vowels: %s" % (vowels) )
 
+length = len(adjectives)
+
+for i in range(length):
+    for j in range(length-1):
+        if adjectives[j] > adjectives[j + 1]:
+            adjectives[j], adjectives[j + 1] = adjectives[j + 1], adjectives[j]
+
+
+print(adjectives)

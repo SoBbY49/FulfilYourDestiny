@@ -14,7 +14,7 @@ half-hearted, unreliable, irresponsible, timid, unstable, careless, persevering,
 inspiring, striking, venturous, confident, unenterprising, lacking,  able, clever, brilliant, sagacious, inventive
 shrewd, sharp, talented, ingenious, versatile, smart, sensible, crafty, subtle, intriguing, unimaginative, dull
 normal, plain, stupid, dry intelligent, thoughtful, imaginative, brilliant, shrewd, superficial, masterly, businesslike
-methodical, able, orderly, rash, inconsistent, unimaginative, unenterprising, confused, disagreeable, tactful
+methodical, orderly, rash, inconsistent, unimaginative, unenterprising, confused, disagreeable, tactful
 accommodating, inspiring, reassuring; condescending, repulsive, selfish, haughty, tactless
 irritating, disagreeable, quarrelsome, unpleasant, hypercritical, sarcastic, annoying
 exacting, impatient, unpleasant, irritable, provoking, intolerant, conceited, stern, harsh
