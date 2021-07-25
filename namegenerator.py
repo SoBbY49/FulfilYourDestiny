@@ -39,6 +39,7 @@ print("All my adjectives: %s" % (adjectives) )
 print("All my consonants: %s" % (consonants) )
 print("All my vowels: %s" % (vowels) )
 
+#Bubble sort
 length = len(adjectives)
 
 for i in range(length):
