@@ -38,11 +38,11 @@ def choose_character():
     s = """
 ------------- CHOOSE YOUR CHARACTER ----------
 
-k) Koopy, the knucklehead Knight from Kookerry
+k) Koron, the knucklehead Knight from Kookaberry
 
-a) Archemides, the astonishing Archer from Anatolia
+a) Archimedes, the astonishing Archer from Anatolia
 
-w) Willy, the woeful Wizard from Wurstland
+w) Wendamyr, the woeful Wizard from Wurstland
     """
 
     art = "%s" % (fyd_art.smallknight_archer_wizard())

@@ -48,11 +48,14 @@ He begins to run at you and as he gets closer you whack your shield against him 
 He lunges at you again and latches onto your foot and starts to tear away the armour on your leg, you kick him off and run away.
 As you start making distance away from him you see your fellow soldiers limping towards you with their armour stripped from their body and their pale skin.
 You manage to make it out of the forest but you have lost a few pieces of armour along the way.
+
+    y) Continue?
         """
 
         art = "Unlucky roll!!\n\n\n%s" % (fyd_art.d20(diceresult))
 
-        answers = {}
+        answers = { 'y' : 'knight_story.part_2b'}
+
     else:
         s = """
 You slowly creep backwards, away from the young boy and sneakily get out of view from him.
@@ -72,9 +75,11 @@ As you keep walking you hear some loud clanking, you hide behind a tree and see 
 def part_1aaa():
     s = """
 You decide not to disturb them as they aren't acting normal and you manage to make your way out of the forest safely.
+
+    y) Continue?
     """
-    answers = { 'a' : 'knight_story.part_1aaa'}
-    return s, fyd_art.knight(), answers
+    answers = { 'y' : 'knight_story.part_2a'}
+    return s, fyd_art.forest(), answers
 
 
 def part_1aab():
@@ -87,7 +92,7 @@ You feel pain all over your body as they sink their teeth into your flesh.
     
     %s""" % (fyd_art.you_died())
     answers = { 'a' : 'knight_story.part_1aab'}
-    return s, fyd_art.knight(), answers
+    return s, fyd_art.zombie(), answers
 
 
 def part_1ab():
@@ -96,9 +101,11 @@ You poke the boy with your sword and he jumps up suddenly, his eyes are complete
 He jumps at you but you already have your sword pointing at him and he jumps straight into your sword and gets impaled.
 He goes limp and you push him off of your sword, you look around and try to think how and why there is a zombie out in the forest.
 You decide to head out of the forest and after a short trek you make it out safely.
+
+    y) Continue?
     """
-    answers = { 'a' : 'knight_story.part_1ab'}
-    return s, fyd_art.knight(), answers
+    answers = { 'y' : 'knight_story.part_2a'}
+    return s, fyd_art.zombie(), answers
 
 
 def part_1ac():
@@ -109,7 +116,7 @@ He jumps at your face but you don’t have time to react as you stumble to the g
     
     %s""" % (fyd_art.you_died())
     answers = { 'a' : 'knight_story.part_1ac'}
-    return s, fyd_art.knight(), answers
+    return s, fyd_art.zombie(), answers
 
 
 def part_1b():
@@ -125,7 +132,7 @@ You attempt to shake him off your shield and he falls to the ground.
         b) Run away from him.
     """
     answers = { 'a' : 'knight_story.part_1ba', 'b': 'knight_story.part_1bb'}
-    return s, fyd_art.knight(), answers
+    return s, fyd_art.zombie(), answers
 
 
 def part_1ba():
@@ -137,22 +144,27 @@ As you miss the boy the sword gets stuck in the ground and you fall onto your ba
 The boy jumps back onto your shield and starts to swing at you, you start punching him until he falls to the ground.
 You slowly get up and see that his head is destroyed with his brain exposed and maggots all inside of his head.
 ‘Is that a zombie?’, you pick up your sword and notice a trail that leads out of the forest, you start limping and following it.
+
+    y) Continue?
         """
 
         art = "Unlucky roll!!\n\n\n%s" % (fyd_art.d20(diceresult))
 
-        answers = {}
+        answers = { 'y' : 'knight_story.part_2b'}
+        return s, art, answers
+
     else:
         s = """
 As he falls to the ground and attempts to get up you swing your sword down and cut off his head.
 He goes limp and you try and catch your breath. ‘Was that...a zombie?’.
 You look at your surroundings and see a trail that leads off out of the forest, you decide to follow it.
-        """
 
+    y) Continue?
+    """
         art = "Woah nice roll!!\n\n\n%s" % (fyd_art.d20(diceresult))
 
-        answers = { 'a' : 'knight_story.part_1ba'}
-    return s, art , answers
+        answers = { 'y' : 'knight_story.part_2a'}
+        return s, art, answers
 
 
 def part_1bb():
@@ -172,6 +184,7 @@ You try to push them away but they overwhelm you and you get swarmed.
         art = "Unlucky roll!!\n\n\n%s" % (fyd_art.d20(diceresult))
 
         answers = {}
+        return s, art, answers
     else:
         s = """
 The boy falls to the ground and you turn around and run as fast as you can.
@@ -180,12 +193,13 @@ You turn your head back in the direction you are running and right in front of y
 But they look like the young boy as they have pale, rotten skin and white eyes.
 You manage to move out of the way in time as they attempt to reach you with their sharp nails.
 You continue running until you reach the outskirts of the forest.
-        """
 
+    y) Continue?
+    """
         art = "Woah nice roll!!\n\n\n%s" % (fyd_art.d20(diceresult))
 
-        answers = {'a': 'knight_story.part_1bb'}
-    return s, art , answers
+        answers = { 'y' : 'knight_story.part_2a'}
+        return s, art, answers
 
 
 def part_1c():
@@ -200,7 +214,7 @@ But they’re acting weird, most of their armour is stripped from their body and
         b) Run away from him.
     """
     answers = { 'a' : 'knight_story.part_1ca', 'b': 'knight_story.part_1cb'}
-    return s, fyd_art.knight(), answers
+    return s, fyd_art.zombie(), answers
 
 
 def part_1ca():
@@ -212,11 +226,14 @@ You swing your sword at them and manage to cut a few of their arms off but as th
 You do manage to kill them but at the cost of some of your armour that they manage to tear off of you.
 You hear the rustling in the bush once more but you decide that whatever is in there is bad news and you kind of want to stay alive.
 You wander off in the opposite direction of the rustling and manage to get out of the forest.
+
+        y) Continue?
         """
 
         art = "Unlucky roll!!\n\n\n%s" % (fyd_art.d20(diceresult))
 
-        answers = {}
+        answers = { 'y' : 'knight_story.part_2b'}
+        return s, art, answers
     else:
         s = """
 As they slowly walk up to you, one by one you hack and slash at them until they are all fully dead.
@@ -226,12 +243,13 @@ He jumps at you and you block him with your shield.
 He bounces off your shield and you swing at him and with one clean cut you slice his head off.
 You look at your surroundings to see if there's a way out of the forest.
 You see a trail that you follow, it eventually leads you out of the forest.
-        """
 
+    y) Continue?
+        """
         art = "Woah nice roll!!\n\n\n%s" % (fyd_art.d20(diceresult))
 
-        answers = { 'a' : 'knight_story.part_1ca'}
-    return s, art , answers
+        answers = { 'y' : 'knight_story.part_2a'}
+        return s, art, answers
 
 
 def part_1cb():
@@ -251,13 +269,40 @@ You are now zombie meat.
         art = "Unlucky roll!!\n\n\n%s" % (fyd_art.d20(diceresult))
 
         answers = {}
+        return s, art, answers
     else:
         s = """
 You decide not to fight them and you run the opposite direction.
 You now find yourself outside of the forest.
-        """
 
+    y) Continue?
+        """
         art = "Woah nice roll!!\n\n\n%s" % (fyd_art.d20(diceresult))
 
-        answers = { 'a' : 'knight_story.part_1cb'}
-    return s, art , answers
+        answers = { 'y' : 'knight_story.part_2a'}
+        return s, art, answers
+
+
+def part_2a():
+        s = """
+Nice job, you've successfully made it out of the forest unharmed!
+You have finished the knights story as best as possible!
+Are you ready to go back to the real world?
+        
+    y) I'm ready!
+    """
+        answers = {'y': 'quit'}
+        return s, fyd_art.youwon(), answers
+
+
+def part_2b():
+        s = """
+Nice job, you've made it out of the forest!
+But you have either gotten injured or lost some armour along the way.
+If you want to try and beat the knights story as best you can then play again.
+Are you ready to go back to the real world?
+
+    y) I'm ready!
+    """
+        answers = {'y': 'quit'}
+        return s, fyd_art.youwon(), answers
