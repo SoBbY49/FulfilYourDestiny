@@ -49,8 +49,8 @@ w) Wendamyr, the woeful Wizard from Wurstland
 
     answers = {
         'k': 'knight_story.part_1',
-        'a': 'archer_story.part_2',
-        'w': 'wizard_story.part_3',
+        'a': 'archer_story.part_1',
+        'w': 'wizard_story.part_1',
     }
 
     return s,art,answers
