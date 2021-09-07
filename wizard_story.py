@@ -15,29 +15,30 @@ You get up and as you try to find a way out you accidentally stub
  your toe on a large stick, ow.
 You pick it up and you see that it has a large gem on the top of it,
  you start handling it to see how it feels.
-It seemed to you to be a magic staff, how you knew that even you
+It seems to you to be a magic staff, how you knew that even you
  don’t know.
 You look back at the skeleton and get some shivers down your spine.
 You squint your eyes and see some writing scratched into the wall
  next to it.
 You walk close to it and read it out loud.
 “Say... fireball?” FOOOOSH, there's a sudden burst of light as a
- large ball of fire emerges on the gem from the top of the staff you 
+ large ball of fire emerges from the gem on the top of the staff you 
  are holding.
 You thrust the staff towards the only door and only way out you can
  find and the entrance explodes open.
 You peek your head out and see bookshelf after bookshelf in the room
  before you.
 You head to the books and start reading them, many not making sense
- to you at first you start to understand the cryptic language in which 
+ to you at first. You start to understand the cryptic language in which 
  these books are written in.
 You read a few pages and realise that it's a spell book, the page
- you’re reading is titled ‘Invisibility’.
+ you’re reading is titled, ‘Invisibility’.
 As you continue to read the page you hear multiple pairs of footsteps
  coming towards you from a set of stairs.
 
     What do you do?
-        a) You quickly run to the stairs, ready to bonk anyone on the head with your staff.
+        a) You quickly run to the stairs, ready to bonk anyone on the
+         head with your staff.
         b) Cast fireball.
         c) Cast invisibility.
     """
@@ -96,7 +97,7 @@ You're blown backwards onto the stairs and the man gets launched
  into the wall.
 He falls onto his knees and you can see the giant hole that he has
  made in the wall.
-He shakily gets up using the large axe and starts walking limping
+He shakily gets up using the large axe and starts walking limply
  towards you.
 You run up the stairs.
 
@@ -140,10 +141,10 @@ The man begins to charge at you.
         answers = {}
     else:
         s = """
-You cast fireball as a large ball of fire emerges on the top of the
+You cast fireball as a large ball of fire emerges from the top of the
  staff.
 You thrust the staff forward as the fireball flies towards the man.
-The fireball flies to fast for the large man to dodge as it smashes 
+The fireball flies too fast for the large man to dodge as it smashes 
 into his face.
 The room bursts in flames and once the flames disappear you see a a 
 large figure now burnt to a crisp.
@@ -173,7 +174,7 @@ He begins destroying everything in the room and you quickly run
 def part_2bc():
     s = """
 You swing your staff against the man's head.
-The amount of force you put into the swing shatters the staff, the wood
+The amount of force you put into the swing shatters the staff and the wood
  explodes.
 The large gem that was on top of the staff falls the the ground.
 The man doesn't even flinch or look affected by the blow.
@@ -209,7 +210,7 @@ You jump into view and thrust your magic staff towards them, the
 large ball of fire whizzes just past the large man but explodes 
 right next to the two peasants.
 An explosion erupts and the peasants are incinerated, the blast 
-from the fireball had caught the large man's hood and cloak on fire.
+from the fireball has caught the large man's hood and cloak on fire.
 He chucks the cloak off of him and you can now see his inhumanly
  large muscles, he begins to charge at you.
 
@@ -290,7 +291,8 @@ You just remembered that there was nothing in the spell book
  which told you how long the invisible spell would last.
 
     What do you do?
-        a) Keep standing there, you can probably stay invisible for a long time...right?
+        a) Keep standing there, you can probably stay invisible for a
+         long time...right?
         b) Go upstairs.
     """
     answers = {'a': 'wizard_story.part_1ca', 'b': 'wizard_story.part_1cb'}

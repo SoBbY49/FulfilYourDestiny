@@ -4,9 +4,9 @@ import dice_roll
 def part_1():
     s = """
 You wake up in a forest with the sun beaming down on your face 
-partially being blocked by your helmet.
+partially blocked by your helmet.
 You get up as your armour clunks around and look at your surroundings.
-In front of you is an extinguished campfire and pieces of armour and 
+In front of you is an extinguished campfire, pieces of armour and 
 weapons lying around you.
 You look down near your feet and see your sword and shield.
 You bend down and pick them up as you reflect the sunlight off of the 
@@ -24,7 +24,7 @@ as fast as you can.
    What do you do?
       a) Start swinging at the bush aimlessly.
       b) Get in a defensive stance with your shield in front of you.
-      c) Shout at the bush, ordering whatever is inside to show itself.
+      c) Shout at the bush, ordering whatever it is to show itself.
     """
 
     answers = { 'a' : 'knight_story.part_1a', 'b': 'knight_story.part_1b', 'c': 'knight_story.part_1c'}
@@ -52,15 +52,15 @@ def part_1aa():
     diceresult = dice_roll.rolld20()
     if diceresult <11:
         s = """
-You try to sneak away from the boy but as you walk away you step on a 
+You try to sneak away from the boy but as you do so you step on a 
 sick and a loud ‘CRACK’ awakens him.
 The boy gets up and you see his pale eyes and rotten skin much better 
 now.
 He begins to run at you and as he gets closer you whack your shield 
-against him and he gets knocked away onto the floor.
+against him and he gets knocked down to the floor.
 He lunges at you again and latches onto your foot and starts to tear
  away the armour on your leg, you kick him off and run away.
-As you start making distance away from him you see your fellow soldiers 
+As you start making some distance from him you see your fellow soldiers 
 limping towards you with their armour stripped from their body and 
 their pale skin.
 You manage to make it out of the forest but you have lost a few pieces 
@@ -109,9 +109,10 @@ over here?’.
 As you get closer to them you see that they have pale and rotten skin 
 and when you look at their eyes they are completely pale.
 You start to run away but they manage to grab a hold of you and tackle
- you to the floor.
+ you to the ground.
 They begin to take your armour off, you start swinging your sword at 
-them and attempt to push them off of you with your shield but it was no use.
+them and attempt to push them off of you with your shield but it is no
+ use.
 You feel pain all over your body as they sink their teeth into your 
 flesh.
     
@@ -141,7 +142,7 @@ def part_1ac():
     s = """
 You whisper to the boy ‘Psst, are you alive?’, the boy doesn't move 
 and you crouch down next to him and whisper into his ear.
-‘Hellooo-.’ the boy jumps up from the floor and you are now face to
+‘Hellooo-.’ the boy jumps up from the ground and you are now face to
  face with his completely white eyes.
 He jumps at your face but you don’t have time to react as you stumble 
 to the ground and he knocks your helmet off and bites into your face.
@@ -216,10 +217,10 @@ def part_1bb():
         s = """
 The boy falls to the ground and you turn around and run as fast as you
  can.
-You look back behind you and the boy is on all fours running towards
+You look back behind you and the boy is on all fours crawling towards
  you.
-You turn your head back in the direction you are running and right in 
-front of you are your fellow knights.
+You turn your head back in the direction you are running towards and 
+right in front of you are your fellow knights.
 But they look like the young boy as they have pale, rotten skin and 
 white eyes.
 You try to get out of their way but they manage to latch onto you and
@@ -238,7 +239,7 @@ You try to push them away but they overwhelm you and you get swarmed.
         s = """
 The boy falls to the ground and you turn around and run as fast as 
 you can.
-You look back behind you and the boy is on all fours running towards
+You look back behind you and the boy is on all fours crawling towards
  you.
 You turn your head back in the direction you are running and right in
  front of you are your fellow knights.
@@ -284,7 +285,7 @@ You swing your sword at them and manage to cut a few of their arms off
 You do manage to kill them but at the cost of some of your armour that
  they manage to tear off of you.
 You hear the rustling in the bush once more but you decide that
- whatever is in there is bad news and you kind of want to stay alive.
+ whatever is in there is bad news and you want to stay alive.
 You wander off in the opposite direction of the rustling and manage 
 to get out of the forest.
 
@@ -298,10 +299,10 @@ to get out of the forest.
     else:
         s = """
 As they slowly walk up to you, one by one you hack and slash at them
- until they are all fully dead.
-You try to catch your breath and you hear the same rustling from
+ until they are all dead.
+You try to catch your breath and you hear the same rustling
  behind you.
-You whip around and there is a young boy running all fours at you
+You whip around and there is a young boy running on all fours at you
  and he also looks undead.
 He jumps at you and you block him with your shield.
 He bounces off your shield and you swing at him and with one clean

@@ -10,7 +10,7 @@ You look at where the banging is coming from and you see a guard
  hitting his sword against the metal bars of the cell you are lying in.
 ‘I'm in prison?’, you get up and try to remember why and how you ended
  up in prison but you don’t remember why.
-You look across the hallway to another person in a prison cell
+You look across the corridor to another person in a prison cell
  sitting cross legged staring at you.
 ‘Uhh excuse me… do you know how I got here?’.
 The person doesn't respond, they only point to a room with a closed
@@ -30,12 +30,14 @@ You creep backwards toward the door and manage to put the key into
 You look around and see that the room is full of weapons and armor,
  your eyes dart to a dagger, a bow and a bunch of arrows in a quiver.
 As you finish equipping the bow and arrow and your dagger in your
- pocket you turn around to leave but you see a guard at the door holding a sword staring at you.
+ pocket you turn around to leave but you see a guard at the door
+  holding a sword staring at you.
 
     What do you do?
         a) You pull out your bow and shoot at him.
         b) You take out your dagger and run at him.
-        c) You play dumb and tell the guard that you thought this was the cafeteria.
+        c) You play dumb and tell the guard that you thought this was
+         the cafeteria.
     """
     answers = {'a': 'archer_story.part_1a', 'b': 'archer_story.part_1b', 'c': 'archer_story.part_1c'}
     return s, fyd_art.archer(), answers
@@ -44,7 +46,7 @@ As you finish equipping the bow and arrow and your dagger in your
 def part_1a():
     s = """
 You quickly pull your bow out and fire two arrows at the guard.
-The guard doesn't have time to react and was hit by the two arrows in
+The guard doesn't have time to react and is hit by the two arrows in
  the chest.
 The guard starts to fall to the ground
 You run over to him to try and attempt to grab him before he hits the
@@ -65,7 +67,7 @@ def part_1aa():
     if diceresult <11:
         s = """
 You attempt to hide but your heart starts beating faster and faster
- as you hear the pair of footsteps coming close.
+ as you hear the pair of footsteps coming closer.
 The two guards enter the room and they see you in the middle of the
  room with the guards body on the floor.
 They run at you with their swords.
@@ -100,7 +102,7 @@ The two guards enter and you pull out your bow and fire an arrow
 It goes through his head and he falls to the ground.
 You stand up pull out your dagger, the guard starts to run out of
  the room but you throw your dagger at him.
-It slices into his neck and he falls against the wall in the hallway.
+It slices into his neck and he falls against the wall in the corridor.
 You walk over to him and take your dagger back, you begin to find
  a way out.
 
@@ -130,7 +132,7 @@ The door is open and you peak inside, the five guards are talking
 
 def part_2aa():
     s = """
-You run at the guards with ready to stab them with your dagger.
+You run at the guards ready to stab them with your dagger.
 They don't see you at first and you manage to kill the two that
  were closest to you.
 The three other guards now see you and charge at you with their
@@ -151,7 +153,7 @@ def part_2ab():
         s = """
 You begin firing arrows at the guards but you can't fire fast enough
  as they begin running at you.
-You try to pull out your dagger in time but one of the guards slices
+You try to pull out your dagger but one of the guards swings
  down and cuts your arm off.
 %s""" % (fyd_art.you_died())
 
@@ -190,8 +192,9 @@ You grab his limp body and pull it inside and hide it underneath the
  weapons.
 
     What do you do?
-        a) Leave the room and go the way all the other prisoners went.
-        b) Put on the guards clothes and go the way all the other prisoners went.
+        a) Leave the room and go the way the other prisoners went.
+        b) Put on the guards clothes and go the way the other
+         prisoners went.
     """
     answers = {'a': 'archer_story.part_1ba', 'b': 'archer_story.part_1bb'}
     return s, fyd_art.archer(), answers
@@ -201,8 +204,8 @@ def part_1ba():
     s = """
 You exit the room and make your way towards the prisoners.
 You walk past the cells that everyone was being held in, you eventually
- walk past the cell you were held in.
-Across form your cell is the prisoner that told you where to go, he is
+ walk past your cell.
+Across from your cell is the prisoner that told you where to go, he is
  still in his cell.
 There are guards surrounding him and he is being beaten.
 The prisoner is in a ball being kicked, you can see his face.
@@ -221,10 +224,10 @@ def part_1baa():
     s = """
 You sneak up to them and manage to get into the cell with them.
 The man being beaten looks over at you and stares into your eyes.
-You grab your dagger and stab them oth in the back of their neck.
+You grab your dagger and stab them both in the back of their neck.
 They fall to the floor and the man gets up.
 He nods at you and starts to walk away, you decide to follow him.
-He starts walking the opposite way of the prisoners and you realise
+He starts walking in the opposite direction of the prisoners and you realise
  that that's the way out.
 You continue walking down the corridor until you see a room with five
  guards inside.
@@ -241,13 +244,13 @@ def part_1bab():
     s = """
 You hide behind the wall and aim your bow and arrow at the guards.
 You shoot one and it lands in his neck and he falls to the ground.
-The other ground jumps up and is about to shout out for help but 
+The other guard jumps up and is about to shout out for help but 
 you manage to shoot him in the chest.
-He falls over to the ground and the man walks over to you.
-He looks at you and nods and starts walking behind you, you decide to 
+He falls to the ground and the man walks over to you.
+He looks at you and nods and starts walking ahead of you, you decide to 
 follow him.
-He starts walking the opposite way of the prisoners and you realise 
-that that's the way out.
+He starts walking in the opposite direction of the prisoners and you realise 
+that's the way out.
 You continue walking down the corridor until you see a room with 
 five guards inside.
 The door is open and you peak inside, the five guards are talking
@@ -317,7 +320,7 @@ def part_1bb():
     s = """
 You exit the room and make your way towards the prisoners.
 You walk past the cells that everyone was being held in, you eventually 
-walk past the cell you were held in.
+walk past your cell.
 Across form your cell is the prisoner that told you where to go, he is 
 still in his cell.
 There are guards surrounding him and he is being beaten.
@@ -342,8 +345,8 @@ The man looks at you in the eyes and you feel a sense of guilt.
 You pull out your dagger and stab both guards as they fall to the 
 ground.
 The man gets up and stares at you, he doesn't seem very thankful.
-He starts walking behind you, you decide to follow him.
-He's walking the opposite way of the prisoners and you realise that 
+He starts walking ahead of you, you decide to follow him.
+He's walking in the opposite direction of the prisoners and you realise 
 that's the way out.
 You continue walking down the corridor until you see a room with 
 five guards inside.
@@ -364,8 +367,8 @@ You stab them both in the neck and they fall to the ground, the man
 gets up of the floor.
 He looks at you and nods and starts walking behind you, you decide 
 to follow him.
-He starts walking the opposite way of the prisoners and you realise 
-that that's the way out.
+He starts walking in the opposite direction of the prisoners and you realise 
+that's the way out.
 You continue walking down the corridor until you see a room with 
 five guards inside.
 The door is open and you peak inside, the five guards are talking 
@@ -383,8 +386,10 @@ The man looks at you waiting for you to do something.
 It seems like he will do anything to escape.
 
     What do you do?
-        a) Pretend to be a guard and bring the man with you to help kill the guards.
-        b) Pretend to be a guard but get the man to wait while you kill the guards.
+        a) Pretend to be a guard and bring the man with you to help 
+        kill the guards.
+        b) Pretend to be a guard but get the man to wait while you 
+        kill the guards.
     """
     answers = {'a': 'archer_story.part_2ca', 'b': 'archer_story.part_2cb'}
     return s, fyd_art.archer(), answers
@@ -392,7 +397,7 @@ It seems like he will do anything to escape.
 
 def part_2ca():
     s ="""
-You give the man your dagger and he hides it behind his back
+You give the man your dagger and he hides it behind his back.
 You walk into the room while holding the man by the collar.
 The guards laugh at the man and one punches him to the floor as he 
 falls out of your grip.
@@ -438,8 +443,8 @@ def part_1c():
 The guard starts to walk to you menacingly, ‘Put the weapons away’ 
 he tells you angrily.
 You put your hands up in the air to try and show no sign of danger 
-to the guard and as he gets closer to you he punches you across the face.
-He takes the bow and the arrows off of you but he doesn't realise 
+to the guard and as he gets closer he punches you across the face.
+He takes the bow and the arrows off you but he doesn't realise 
 that you have a dagger in your pocket.
 You stand up and he starts to put handcuffs on your wrists
 , 'Don't try anything funny' he says.
@@ -484,12 +489,12 @@ def part_1cb():
     s = """
 The guard puts the handcuffs on you and walks you out of the room.
 Instead of taking you the way the other prisoners went he takes you 
-the opposite way.
+in the opposite direction.
 You begin to hear some talking so you think that now is the time to
  kill him.
 With your wrists still in handcuffs you dislocate both your thumbs 
 and slip your hands through the handcuffs.
-You drop your handcuffs and the guard walking you looks down at them, 
+You drop your handcuffs and the guard walking with you looks down at them, 
 you pull your dagger out and slice his throat.
 
     y) Continue? 
@@ -500,7 +505,7 @@ you pull your dagger out and slice his throat.
 
 def part_2d():
     s = """
-You walk the opposite way from the other prisoners trying to look for 
+You walk in the opposite direction of the other prisoners trying to look for 
 a way out.
 You continue walking down the corridor until see a room with five guards
  inside.
