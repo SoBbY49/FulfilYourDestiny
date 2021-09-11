@@ -53,8 +53,6 @@ def game_step(name_of_step):
     - handle response
     - go to the next game_step (as decided by choice) ^^
 
-    FIXME : there are some special cases we want to handle on key press.. ie, when selecting character, we want to set the game_state['character']... here or in keypress?
-            game_State[stage] = intro can be useful?
 
     """
     # handy variables - matching the order of results from the method that defines the next step
